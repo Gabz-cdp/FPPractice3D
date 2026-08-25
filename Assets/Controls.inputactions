@@ -32,6 +32,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "f93c6dea-4d50-48ef-899d-5448232d4f98",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "crouch",
+                    "type": "Button",
+                    "id": "812ea469-9a24-477b-a5a2-fcb13f808734",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -41,7 +59,7 @@
                     "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";keyboard and mouse",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -63,7 +81,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";keyboard and mouse",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -74,7 +92,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";keyboard and mouse",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -85,7 +103,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";keyboard and mouse",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -96,7 +114,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";keyboard and mouse",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -118,7 +136,7 @@
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -129,7 +147,7 @@
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -140,7 +158,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -151,7 +169,7 @@
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -162,7 +180,7 @@
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";keyboard and mouse",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -173,13 +191,63 @@
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";controller",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7efe0373-3728-471c-bf60-8f6e940673da",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard and mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "130e431c-5d37-4dc1-9b9c-55b9772c93b7",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard and mouse",
+                    "action": "crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "keyboard and mouse",
+            "bindingGroup": "keyboard and mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "controller",
+            "bindingGroup": "controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
