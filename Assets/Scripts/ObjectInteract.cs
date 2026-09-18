@@ -18,7 +18,7 @@ public class ObjectInteract : MonoBehaviour
     public bool isExamining = false; //checks to see that the obejct is being held and examined
 
     public Canvas objectInteractCanvas; //canvas used to interact and rotate object 
-    public Canvas interactMenu;
+    public Canvas interactCanvas;
     public Canvas HUDCanvas; //main canvas
     public GameObject tableObject; //where the clinder is placed on the table
     private Vector3 lastMousePosition; //checks where the mouse was positioned
@@ -35,8 +35,8 @@ public class ObjectInteract : MonoBehaviour
     void Start()
     {
         objectInteractCanvas.enabled = false;
-        interactMenu.enabled = false;
-        HUDCanvas.enabled = true;
+        interactCanvas.enabled = true;
+        HUDCanvas.enabled = false;
         targetObject = GameObject.Find("Player");
         playerInput = targetObject.GetComponent<PlayerInput>();
     }
@@ -66,14 +66,14 @@ public class ObjectInteract : MonoBehaviour
                             originalPositions[examinedObject] = examinedObject.position;
                             originalRotations[examinedObject] = examinedObject.rotation;
                             objectInteractCanvas.enabled = false;
-                            interactMenu.enabled = true;
+                            interactCanvas.enabled = true;
                             HUDCanvas.enabled = false;
                             Examine(); StartExamination();
                         }
                         else
                         {
                             objectInteractCanvas.enabled = true;
-                            interactMenu.enabled = false;
+                            interactCanvas.enabled = false;
                             HUDCanvas.enabled = true;
                             NonExamine(); StopExamination();
                         }
